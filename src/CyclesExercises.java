@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class LauraTheSeller {
+public class CyclesExercises {
 
     public static void main(String[] args) {
-        LauraTheSeller lauraTheSeller = new LauraTheSeller();
+        CyclesExercises lauraTheSeller = new CyclesExercises();
         boolean exit = true;
 
         do {
