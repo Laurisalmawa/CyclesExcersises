@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class CyclesExercises {
+public class Loops {
 
     public static void main(String[] args) {
-        CyclesExercises lauraTheSeller = new CyclesExercises();
+        Loops lauraTheSeller = new Loops();
         boolean exit = true;
 
         do {
@@ -33,7 +33,21 @@ public class CyclesExercises {
                     lauraTheSeller.printHalfTree();
                     break;
                 case 5:
-                    lauraTheSeller.paintSymbolsByMaxNumber();
+                    System.out.println("Choose the option you want to use:");
+                    System.out.println("1. Paint Symbols by the max number you enter.");
+                    System.out.println("2. Paint Symbols by the max lines you enter.");
+                    Scanner scanner1 = new Scanner(System.in);
+                    int optionTree = scanner1.nextInt();
+
+                    switch (optionTree) {
+                        case 1:
+                            lauraTheSeller.paintSymbolsByMaxNumber();
+                        break;
+                        case 2:
+                            lauraTheSeller.paintSymbolsByMaxLines();
+                        break;
+                        default:
+                    }
                 default:
                     exit = false;
             }
@@ -175,6 +189,7 @@ public class CyclesExercises {
         }
     }
 
+
     public void paintSymbolsByMaxNumber() {
         System.out.println("Enter the number of asterisks that you want on your tree:");
         Scanner scanner = new Scanner(System.in);
@@ -208,6 +223,23 @@ public class CyclesExercises {
             //
         }
 
+    }
+
+    public void paintSymbolsByMaxLines() {
+        System.out.println("Enter the number of lines tha you want to get on the tree: ");
+        Scanner scanner = new Scanner(System.in);
+        int maxLines = scanner.nextInt();
+        int spaces = maxLines - 1 ;
+
+        for(int countLines = 1, plusSymbols = 1; countLines <= maxLines; countLines++, spaces--, plusSymbols+= 2) {
+            for(int countSpaces = 0; countSpaces <= spaces; countSpaces++) {
+                System.out.print(" ");
+            }
+            for(int countSymbols = 1; countSymbols <= plusSymbols; countSymbols++ ) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
     }
 
 }
