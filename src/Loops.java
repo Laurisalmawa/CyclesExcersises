@@ -233,7 +233,7 @@ public class Loops {
                     int spaces1 = maxLines - 1;
                     int baseLines1 = maxLines/2;
                     int baseSpaces1 = maxLines/2;
-                    int baseSymbols1  = maxLines -1;
+                    int baseSymbols1  = ((maxLines % 2) == 1) ? maxLines : (maxLines - 1);
 
                     for (int countLines1 = 1, plusSymbols = 1; countLines1 <= maxLines; countLines1++, spaces1--, plusSymbols += 2) {
                         for (int countSpaces = 0; countSpaces <= spaces1; countSpaces++) {
@@ -248,7 +248,7 @@ public class Loops {
                         for (int countBaseSpaces = 0; countBaseSpaces <= baseSpaces1; countBaseSpaces++) {
                             System.out.print(" ");
                         }
-                        for (int countBaseSymbols = 1; countBaseSymbols <= maxLines; countBaseSymbols++) {
+                        for (int countBaseSymbols = 1; countBaseSymbols <= baseSymbols1; countBaseSymbols++) {
                             System.out.print("*");
                         }
                         System.out.println(" ");
