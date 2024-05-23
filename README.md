@@ -13,10 +13,10 @@ The fourth one will ask you as well for a number and it will print a triangle wi
 The fifth one will be divided in 2, you can either get a tree by the maximum symbols you want or by the maximum lines that you want to print.
 
 ## Table of contents
-- Resources used (#resources used)
-- Instalation (#instalation)
-- Usages (#usages)
-- Contact (#contact)
+- [Resources used] (#resources used)
+- [Instalation] (#instalation)
+- [Usages] (#usages)
+- [Contact] (#contact)
 
 ## Resources used
 
