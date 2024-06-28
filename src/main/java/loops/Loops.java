@@ -1,3 +1,5 @@
+package loops;
+
 import java.util.Scanner;
 
 public class Loops {
@@ -196,71 +198,71 @@ public class Loops {
         int optionTree = scanner.nextInt();
         boolean exit = true;
 
-            switch (optionTree) {
-                case 1:
-                    System.out.println("Enter the number of asterisks that you want on your tree:");
-                    Scanner scanner1 = new Scanner(System.in);
-                    int maxSymbols = scanner1.nextInt();
-                    int lines = (maxSymbols % 2 == 1)? maxSymbols/2+1 : maxSymbols/2;
-                    int spaces = maxSymbols / 2;
-                    int baseLines = lines / 2;
-                    int baseSpaces = maxSymbols / 3;
-                    int baseSymbols = maxSymbols - 2*baseSpaces;
+        switch (optionTree) {
+            case 1:
+                System.out.println("Enter the number of asterisks that you want on your tree:");
+                Scanner scanner1 = new Scanner(System.in);
+                int maxSymbols = scanner1.nextInt();
+                int lines = (maxSymbols % 2 == 1)? maxSymbols/2+1 : maxSymbols/2;
+                int spaces = maxSymbols / 2;
+                int baseLines = lines / 2;
+                int baseSpaces = maxSymbols / 3;
+                int baseSymbols = maxSymbols - 2*baseSpaces;
 
-                    for (int countLines = 1 , symbols = 1; countLines <= lines; countLines++, symbols += 2, spaces--) {
-                        for (int countSpaces = 1; spaces >= countSpaces; countSpaces++) {
-                            System.out.print(" ");
-                        }
-                        for (int countSymbols = (maxSymbols % 2 == 1) ? 1 : 2; countSymbols <= symbols; countSymbols++) {
-                            System.out.print("*");
-                        }
-                        System.out.println(" ");
+                for (int countLines = 1 , symbols = 1; countLines <= lines; countLines++, symbols += 2, spaces--) {
+                    for (int countSpaces = 1; spaces >= countSpaces; countSpaces++) {
+                        System.out.print(" ");
                     }
-                    for (int countBaseLines = 1; countBaseLines <= baseLines; countBaseLines++) {
-                        for (int countBaseSpaces = 1; countBaseSpaces <= baseSpaces; countBaseSpaces++){
-                            System.out.print(" ");
-                        }
-                        for (int countBaseSymbols = 1; countBaseSymbols <= baseSymbols; countBaseSymbols++) {
-                            System.out.print("*");
-                        }
-                        System.out.println(" ");
+                    for (int countSymbols = (maxSymbols % 2 == 1) ? 1 : 2; countSymbols <= symbols; countSymbols++) {
+                        System.out.print("*");
                     }
-                    break;
-                case 2:
-                    System.out.println("Enter the number of lines tha you want to get on the tree: ");
-                    Scanner scanner2 = new Scanner(System.in);
-                    int maxLines = scanner2.nextInt();
-                    int spaces1 = maxLines - 1;
-                    int baseLines1 = maxLines/2;
-                    int baseSpaces1 = maxLines/2;
-                    int baseSymbols1  = ((maxLines % 2) == 1) ? maxLines : (maxLines - 1);
+                    System.out.println(" ");
+                }
+                for (int countBaseLines = 1; countBaseLines <= baseLines; countBaseLines++) {
+                    for (int countBaseSpaces = 1; countBaseSpaces <= baseSpaces; countBaseSpaces++){
+                        System.out.print(" ");
+                    }
+                    for (int countBaseSymbols = 1; countBaseSymbols <= baseSymbols; countBaseSymbols++) {
+                        System.out.print("*");
+                    }
+                    System.out.println(" ");
+                }
+                break;
+            case 2:
+                System.out.println("Enter the number of lines tha you want to get on the tree: ");
+                Scanner scanner2 = new Scanner(System.in);
+                int maxLines = scanner2.nextInt();
+                int spaces1 = maxLines - 1;
+                int baseLines1 = maxLines/2;
+                int baseSpaces1 = maxLines/2;
+                int baseSymbols1  = ((maxLines % 2) == 1) ? maxLines : (maxLines - 1);
 
-                    for (int countLines1 = 1, plusSymbols = 1; countLines1 <= maxLines; countLines1++, spaces1--, plusSymbols += 2) {
-                        for (int countSpaces = 0; countSpaces <= spaces1; countSpaces++) {
-                            System.out.print(" ");
-                        }
-                        for (int countSymbols = 1; countSymbols <= plusSymbols; countSymbols++) {
-                            System.out.print("*");
-                        }
-                        System.out.println(" ");
+                for (int countLines1 = 1, plusSymbols = 1; countLines1 <= maxLines; countLines1++, spaces1--, plusSymbols += 2) {
+                    for (int countSpaces = 0; countSpaces <= spaces1; countSpaces++) {
+                        System.out.print(" ");
                     }
-                    for (int countBaseLines = 1; countBaseLines <= baseLines1; countBaseLines++) {
-                        for (int countBaseSpaces = 0; countBaseSpaces <= baseSpaces1; countBaseSpaces++) {
-                            System.out.print(" ");
-                        }
-                        for (int countBaseSymbols = 1; countBaseSymbols <= baseSymbols1; countBaseSymbols++) {
-                            System.out.print("*");
-                        }
-                        System.out.println(" ");
+                    for (int countSymbols = 1; countSymbols <= plusSymbols; countSymbols++) {
+                        System.out.print("*");
                     }
-                    break;
+                    System.out.println(" ");
+                }
+                for (int countBaseLines = 1; countBaseLines <= baseLines1; countBaseLines++) {
+                    for (int countBaseSpaces = 0; countBaseSpaces <= baseSpaces1; countBaseSpaces++) {
+                        System.out.print(" ");
+                    }
+                    for (int countBaseSymbols = 1; countBaseSymbols <= baseSymbols1; countBaseSymbols++) {
+                        System.out.print("*");
+                    }
+                    System.out.println(" ");
+                }
+                break;
 
-                case 3:
-                    break;
+            case 3:
+                break;
 
-                default:
-                    exit = false;
-            }
+            default:
+                exit = false;
+        }
         return exit;
     }
 }

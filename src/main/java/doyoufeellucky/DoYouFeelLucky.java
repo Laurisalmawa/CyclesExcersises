@@ -1,8 +1,8 @@
+package doyoufeellucky;
+
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class DoUFeelLucky {
+public class DoYouFeelLucky {
     public static void main(String[] args) {
         int hidden = (int)Math.floor(Math.random()*100);
         Scanner input = new Scanner(System.in);
@@ -19,7 +19,7 @@ public class DoUFeelLucky {
             } else if(number > hidden) {
                 System.out.println("Nah! try again, the number must be lower.");
             } else {
-            System.out.println("Nah! try again, the number must be greater.");
+                System.out.println("Nah! try again, the number must be greater.");
             }
             attempts++;
         } while (!gotItRight);
